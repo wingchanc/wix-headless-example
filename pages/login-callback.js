@@ -4,7 +4,7 @@ import { createClient, OAuthStrategy } from "@wix/sdk";
 
 const myWixClient = createClient({
   auth: OAuthStrategy({
-    clientId: `a491d07a-24a9-4b64-a566-0525c26a081b`,
+    clientId: `769dbdef-f881-43f6-a1e6-3fd88a223411`,
     tokens: JSON.parse(Cookies.get("session") || null),
   }),
 });
