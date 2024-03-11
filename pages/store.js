@@ -10,7 +10,7 @@ import testIds from "@/src/utils/test-ids";
 const myWixClient = createClient({
   modules: { products, currentCart, redirects },
   auth: OAuthStrategy({
-    clientId: `3323d37c-4b3b-45f5-924d-a26065f0871e`,
+    clientId: `769dbdef-f881-43f6-a1e6-3fd88a223411`,
     tokens: JSON.parse(Cookies.get("session") || null),
   }),
 });
