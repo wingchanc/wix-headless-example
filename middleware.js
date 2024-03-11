@@ -6,7 +6,7 @@ export async function middleware(request) {
   if (!request.cookies.get("session")) {
     const response = NextResponse.next();
     const myWixClient = createClient({
-      auth: OAuthStrategy({ clientId: `769dbdef-f881-43f6-a1e6-3fd88a223411` }),
+      auth: OAuthStrategy({ clientId: `3323d37c-4b3b-45f5-924d-a26065f0871e` }),
     });
     response.cookies.set(
       "session",
