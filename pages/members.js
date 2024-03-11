@@ -7,7 +7,7 @@ import { members } from "@wix/members";
 const myWixClient = createClient({
   modules: { members },
   auth: OAuthStrategy({
-    clientId: `a491d07a-24a9-4b64-a566-0525c26a081b`,
+    clientId: `769dbdef-f881-43f6-a1e6-3fd88a223411`,
     tokens: JSON.parse(Cookies.get("session") || null),
   }),
 });
@@ -29,6 +29,7 @@ export default function LoginBar() {
     );
     localStorage.setItem("oauthRedirectData", JSON.stringify(data));
     const { authUrl } = await myWixClient.auth.getAuthUrl(data);
+    console.log(authUrl)
     window.location = authUrl; // wix auth will send the user back to the callback page (login-callback.js)
   }
 
